@@ -9,6 +9,23 @@ npm install apple-music-auth
 npx cap sync
 ```
 
+## iOS Setup
+
+### Manually Adding Permissions (Recommended)
+
+To enable Apple Music authorization, you need to add the required permission to your iOS project:
+
+1. Open the plugin’s Xcode workspace:  
+ios/AppleMusicAuth/Plugin.xcworkspace
+2. Select your **Target → Info → +** to add a new key.  
+3. Add the following key and description:  
+
+| Key | Description |
+|-----|-------------|
+| `NSAppleMusicUsageDescription` | `We need access to Apple Music to authorize user accounts` |
+
+> ⚠️ This method is simple and reliable. In Capacitor 7, it is no longer necessary to modify `Info.plist` via `plugin.xml`.
+
 ## API
 
 <docgen-index>
@@ -18,7 +35,8 @@ npx cap sync
 </docgen-index>
 
 <docgen-api>
-<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+Request an Apple Music user token using a developer token. 
+
 
 ### requestUserToken(options: { developerToken: string })
 
