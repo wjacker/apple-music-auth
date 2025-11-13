@@ -13,10 +13,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@capacitor/android": "7.0.0",
     "@capacitor/core": "latest",
-    "apple-music-auth": "file:..",
     "@capacitor/ios": "7.0.0",
-    "@capacitor/android": "7.0.0"
+    "apple-music-auth": "file:.."
   },
   "devDependencies": {
     "@capacitor/cli": "latest",
