@@ -13,24 +13,24 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`requestUserToken(options: { developerToken: string }): Promise<{ token: string }>`](#requestUserToken)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### requestUserToken(options: { developerToken: string })
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+requestUserToken(options: { developerToken: string; }) => Promise<{ token: string; }>
 ```
 
 | Param         | Type                            |
 | ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| **`options`** | <code>{ developerToken: string; }</code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;{ token: string; }&gt;</code>
 
 --------------------
 

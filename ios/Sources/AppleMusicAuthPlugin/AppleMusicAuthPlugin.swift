@@ -12,12 +12,27 @@ public class AppleMusicAuthPlugin: CAPPlugin, CAPBridgedPlugin {
     public let pluginMethods: [CAPPluginMethod] = [
         CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise)
     ]
-    private let implementation = AppleMusicAuth()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+    @objc public func requestUserToken(_ call: CAPPluginCall) {
+        let devToken = call.getString("developerToken") ?? ""
+        let controller = SKCloudServiceController()
+        if SKCloudServiceController.authorizationStatus() != .denied {
+            SKCloudServiceController.requestAuthorization { status in
+                guard status == .authorized else {
+                    call.reject("not authorized")
+                    return
+                }
+
+                controller.requestUserToken(forDeveloperToken: devToken) {
+                    token,
+                    err in
+                    if let token = token {
+                        call.resolve(["token": token])
+                    } else {
+                        call.reject("failed")
+                    }
+                }
+            }
+        }
     }
 }

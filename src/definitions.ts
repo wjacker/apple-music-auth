@@ -1,3 +1,3 @@
 export interface AppleMusicAuthPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  requestUserToken(options: { developerToken: string }): Promise<{ token: string }>
 }
