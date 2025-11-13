@@ -1,4 +1,4 @@
-package com.chr.applemusicauth;
+package com.jack.applemusicauth;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
@@ -6,10 +6,10 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "AppleMusicAuthPlugin")
-public class AppleMusicAuthPluginPlugin extends Plugin {
+@CapacitorPlugin(name = "AppleMusicAuth")
+public class AppleMusicAuthPlugin extends Plugin {
 
-    private AppleMusicAuthPlugin implementation = new AppleMusicAuthPlugin();
+    private AppleMusicAuth implementation = new AppleMusicAuth();
 
     @PluginMethod
     public void echo(PluginCall call) {

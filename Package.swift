@@ -2,27 +2,27 @@
 import PackageDescription
 
 let package = Package(
-    name: "ChrpAppleMusicAuth",
+    name: "AppleMusicAuth",
     platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "ChrpAppleMusicAuth",
-            targets: ["AppleMusicAuthPluginPlugin"])
+            name: "AppleMusicAuth",
+            targets: ["AppleMusicAuthPlugin"])
     ],
     dependencies: [
         .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", from: "7.0.0")
     ],
     targets: [
         .target(
-            name: "AppleMusicAuthPluginPlugin",
+            name: "AppleMusicAuthPlugin",
             dependencies: [
                 .product(name: "Capacitor", package: "capacitor-swift-pm"),
                 .product(name: "Cordova", package: "capacitor-swift-pm")
             ],
-            path: "ios/Sources/AppleMusicAuthPluginPlugin"),
+            path: "ios/Sources/AppleMusicAuthPlugin"),
         .testTarget(
-            name: "AppleMusicAuthPluginPluginTests",
-            dependencies: ["AppleMusicAuthPluginPlugin"],
-            path: "ios/Tests/AppleMusicAuthPluginPluginTests")
+            name: "AppleMusicAuthPluginTests",
+            dependencies: ["AppleMusicAuthPlugin"],
+            path: "ios/Tests/AppleMusicAuthPluginTests")
     ]
 )

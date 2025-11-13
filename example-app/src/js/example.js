@@ -1,6 +1,6 @@
-import { AppleMusicAuthPlugin } from '@chrp/apple-music-auth';
+import { AppleMusicAuth } from 'apple-music-auth';
 
 window.testEcho = () => {
     const inputValue = document.getElementById("echoInput").value;
-    AppleMusicAuthPlugin.echo({ value: inputValue })
+    AppleMusicAuth.echo({ value: inputValue })
 }

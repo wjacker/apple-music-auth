@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { AppleMusicAuthPluginPlugin } from './definitions';
+import type { AppleMusicAuthPlugin } from './definitions';
 
-const AppleMusicAuthPlugin = registerPlugin<AppleMusicAuthPluginPlugin>('AppleMusicAuthPlugin', {
-  web: () => import('./web').then((m) => new m.AppleMusicAuthPluginWeb()),
+const AppleMusicAuth = registerPlugin<AppleMusicAuthPlugin>('AppleMusicAuth', {
+  web: () => import('./web').then((m) => new m.AppleMusicAuthWeb()),
 });
 
 export * from './definitions';
-export { AppleMusicAuthPlugin };
+export { AppleMusicAuth };

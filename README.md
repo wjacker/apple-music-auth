@@ -1,11 +1,11 @@
-# @chrp/apple-music-auth
+# apple-music-auth
 
 Capacitor plugin for Apple Music authorization
 
 ## Install
 
 ```bash
-npm install @chrp/apple-music-auth
+npm install apple-music-auth
 npx cap sync
 ```
 

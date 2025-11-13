@@ -5,14 +5,14 @@ import Capacitor
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitorjs.com/docs/plugins/ios
  */
-@objc(AppleMusicAuthPluginPlugin)
-public class AppleMusicAuthPluginPlugin: CAPPlugin, CAPBridgedPlugin {
-    public let identifier = "AppleMusicAuthPluginPlugin"
-    public let jsName = "AppleMusicAuthPlugin"
+@objc(AppleMusicAuthPlugin)
+public class AppleMusicAuthPlugin: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "AppleMusicAuthPlugin"
+    public let jsName = "AppleMusicAuth"
     public let pluginMethods: [CAPPluginMethod] = [
         CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise)
     ]
-    private let implementation = AppleMusicAuthPlugin()
+    private let implementation = AppleMusicAuth()
 
     @objc func echo(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""
