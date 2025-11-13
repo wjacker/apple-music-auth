@@ -1,0 +1,31 @@
+{
+  "api": {
+    "name": "AppleMusicAuthPlugin",
+    "slug": "applemusicauthplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "requestUserToken",
+        "signature": "(options: { developerToken: string; }) => Promise<{ token: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ developerToken: string; }"
+          }
+        ],
+        "returns": "Promise<{ token: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "requestusertoken"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
