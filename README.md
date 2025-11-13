@@ -30,22 +30,21 @@ ios/AppleMusicAuth/Plugin.xcworkspace
 
 <docgen-index>
 
-* [`requestUserToken(options: { developerToken: string }): Promise<{ token: string }>`](#requestUserToken)
+* [`requestUserToken(...)`](#requestusertoken)
 
 </docgen-index>
 
 <docgen-api>
-Request an Apple Music user token using a developer token. 
+<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-
-### requestUserToken(options: { developerToken: string })
+### requestUserToken(...)
 
 ```typescript
 requestUserToken(options: { developerToken: string; }) => Promise<{ token: string; }>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
+| Param         | Type                                     |
+| ------------- | ---------------------------------------- |
 | **`options`** | <code>{ developerToken: string; }</code> |
 
 **Returns:** <code>Promise&lt;{ token: string; }&gt;</code>
